@@ -67,3 +67,13 @@ Array.prototype.transpose = function() {
 
   return transposed;
 }
+
+
+Array.prototype.myEach = function(callback) {
+  for (let i = 0; i < this.length; i++) {
+    callback(this[i], i);
+  }
+}
+
+
+
