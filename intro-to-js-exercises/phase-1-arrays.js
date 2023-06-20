@@ -1,10 +1,17 @@
 // Your code here
 Array.prototype.uniq = function() {  
-  const hash = {};
+  // const hash = {};
+  const arr = [];
   
   this.forEach((el) => {
-    hash[el] = true;
+    // hash[el] = true;
+
+    if (!arr.includes(el)) {
+      arr.push(el);
+    }
   });
 
-  return Object.keys(hash).map((el) => Number(el));
+  return arr;
+
+  // return Object.keys(hash).map((el) => Number(el));
 }
