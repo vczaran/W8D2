@@ -99,3 +99,17 @@ Array.prototype.myMap = function(callback) {
 //     return arr;
 //   }
 // }
+
+
+Array.prototype.myReduce = function(callback, initialValue) {
+  let acc = initialValue || this[0];
+
+  this.myEach((el, i) => {
+    if (initialValue === undefined && i === 0) {
+    return
+  }; 
+    acc = callback(acc, el);
+  });
+
+  return acc;
+}
