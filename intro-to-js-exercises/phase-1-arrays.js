@@ -38,3 +38,32 @@ Array.prototype.twoSum = function() {
   };
   return pairs;
 }
+
+Array.prototype.transpose = function() {
+  const transposed = [];
+
+  // for (let i = 0; i < this[0].length; i++) {
+  //   const arr = [];
+
+  //   for (let j = 0; j < this.length; j++) {
+  //     arr.push(this[j][i]);
+  //   }
+
+  //   transposed.push(arr);
+  // }
+
+  // return transposed;
+
+
+  this.forEach((el1, idx) => {
+    const arr = [];
+
+    this.forEach((el2, idx2) => {
+      arr.push(this[idx2][idx]);
+    })
+
+    transposed.push(arr);
+  });
+
+  return transposed;
+}
