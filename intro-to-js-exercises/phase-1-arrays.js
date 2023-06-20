@@ -76,4 +76,26 @@ Array.prototype.myEach = function(callback) {
 }
 
 
+Array.prototype.myMap = function(callback) {
+  const arr = [];
+  // const handleArray = initArrayHandler();
 
+  this.myEach((el) => {
+    arr.push(callback(el));
+    // handleArray(callback(el));
+  });
+
+  return arr;
+  // return handleArray();
+};
+
+// function initArrayHandler() {
+//   const arr = [];
+
+//   return function(element) {
+//     if (element) {
+//       arr.push(element);
+//     }
+//     return arr;
+//   }
+// }
